@@ -1,0 +1,292 @@
+/* ======================== */
+/* 1. RESET, VARIÁVEIS E GLOBAIS */
+/* ======================== */
+
+:root {
+    --cor-principal: #0F52BA; /* Azul Marinho/Escuro (para o box Hero) */
+    --cor-secundaria: #1E90FF; /* Azul mais claro (para os ícones) */
+    --cor-fundo: #F5F5F5; /* Fundo Levemente Cinza */
+    --cor-texto-escuro: #333333;
+    --cor-texto-claro: #FFFFFF;
+    --cor-link-hover: #1E90FF;
+    --cor-texto-padrao: #4A4A4A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-padrao);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 20px;
+}
+
+/* Título de Seção - Similar ao design */
+.section-title {
+    font-size: 2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.section-padded {
+    padding: 60px 0;
+}
+
+/* ======================== */
+/* 2. HEADER (FLEXBOX) */
+/* ======================== */
+
+.main-header {
+    background-color: var(--cor-texto-claro); /* Fundo Branco */
+    padding: 15px 0;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.header-container {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: space-between; /* Espaçamento entre logo e nav */
+    align-items: center; /* Alinha verticalmente */
+}
+
+.logo-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--cor-texto-escuro);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex; /* Flexbox para os links de navegação */
+    gap: 30px;
+}
+
+.main-nav a {
+    color: var(--cor-texto-escuro);
+    font-weight: 600;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    color: var(--cor-link-hover);
+}
+
+/* ======================== */
+/* 3. HERO SECTION (FLEXBOX) */
+/* ======================== */
+
+.hero-section {
+    background-color: var(--cor-texto-claro);
+    padding-bottom: 80px;
+}
+
+.hero-content {
+    display: flex; /* Ativa o Flexbox para as duas colunas */
+    align-items: stretch; /* Garante que as colunas tenham a mesma altura */
+}
+
+.hero-text-box {
+    /* Ocupa a largura necessária conforme o design */
+    background-color: var(--cor-principal); /* Fundo Azul Escuro */
+    color: var(--cor-texto-claro);
+    padding: 50px;
+    flex: 1; /* Ocupa 1 parte do espaço flexível */
+    border-radius: 0 0 10px 0; /* Arredondamento sutil no canto inferior direito */
+}
+
+.hero-text-box h2 {
+    font-size: 2.5em;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--cor-texto-claro); /* Cor do texto no bloco escuro */
+}
+
+.hero-text-box p {
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.hero-image-box {
+    /* Ocupa o restante do espaço (visualmente 2/3) */
+    flex: 2; 
+    min-height: 350px;
+    
+    /* Configuração da Imagem */
+    background-image: url('ChatGPT Image 30 de set. de 2025, 17_33_03.jpg'); 
+    background-size: cover;
+    background-position: 70% 30px; /* Ajuste para mostrar a parte das pessoas */
+    background-repeat: no-repeat;
+    
+    /* Para focar apenas na parte ilustrada da imagem original */
+    /* Cria um gradiente transparente/azul para cobrir a parte superior do BG */
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 30%),
+                      url('https://via.placeholder.com/800x400/CCCCCC/888888?text=Imagem+Ilustrativa'); /* Use uma imagem real aqui! */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Como a imagem original contém a ilustração, vamos simular a ilustração com a parte correta da imagem */
+/* OBS: Para este projeto, o ideal é usar a imagem original cortada para a área da ilustração. */
+
+
+/* ======================== */
+/* 4. EXEMPLOS (GRID) */
+/* ======================== */
+
+.section-examples {
+    background-color: var(--cor-fundo);
+}
+
+.examples-grid {
+    display: grid; /* Ativa o Grid */
+    /* Define 3 colunas iguais */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px 30px; /* Espaçamento entre as linhas e colunas */
+    margin-top: 40px;
+}
+
+.example-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.icon-placeholder {
+    /* Define o círculo de fundo do ícone */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--cor-secundaria); 
+    color: var(--cor-texto-claro);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    border: 3px solid #E0E0E0;
+}
+
+.example-card p {
+    font-weight: 600;
+    color: var(--cor-texto-escuro);
+}
+
+/* ======================== */
+/* 5. SEÇÕES DE LISTA E CTA */
+/* ======================== */
+
+.section-padded ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.section-padded ul li {
+    margin-bottom: 15px;
+    position: relative;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Adiciona o ponto azul na lista */
+.section-padded ul li::before {
+    content: "•"; 
+    color: var(--cor-secundaria);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* CTA Inferior */
+.cta-bottom {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-claro);
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px; /* Espaçamento da seção superior */
+}
+
+.cta-bottom p {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+/* Estilo para o negrito no CTA */
+.cta-bottom p strong {
+    font-weight: 800;
+}
+
+
+/* ======================== */
+/* 6. RESPONSIVIDADE */
+/* ======================== */
+
+/* Para telas menores (como Tablets) */
+@media (max-width: 900px) {
+    .header-container {
+        flex-direction: column; /* Empilha logo e navegação */
+        text-align: center;
+    }
+
+    .main-nav ul {
+        gap: 15px;
+        margin-top: 10px;
+        justify-content: center;
+    }
+    
+    .hero-content {
+        flex-direction: column; /* Empilha o texto e a imagem */
+    }
+
+    .hero-text-box {
+        padding: 40px;
+        border-radius: 10px 10px 0 0; /* Arredonda a parte de cima */
+    }
+
+    .hero-image-box {
+        min-height: 250px;
+    }
+    
+    .examples-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas no Tablet */
+    }
+}
+
+/* Para telas muito pequenas (como Celulares) */
+@media (max-width: 600px) {
+    .logo-title {
+        font-size: 1em;
+    }
+    
+    .main-nav ul {
+        flex-wrap: wrap; /* Quebra a linha se não couber */
+    }
+    
+    .hero-text-box h2 {
+        font-size: 1.8em;
+    }
+    
+    .examples-grid {
+        grid-template-columns: 1fr; /* 1 coluna no Celular */
+    }
+    
+    .section-padded {
+        padding: 40px 0;
+    }
+}

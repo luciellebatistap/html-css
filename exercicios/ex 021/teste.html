@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelo de Caixa em CSS</title>
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    .caixa {
+      width: 200px;               /* largura do conteúdo */
+      background-color: lightblue; /* conteúdo */
+      padding: 20px;               /* espaço interno */
+      border: 5px solid blue;      /* borda */
+      margin: 30px;                /* espaço externo */
+    }
+
+    .caixa::before {
+      content: "Conteúdo";
+      display: block;
+      font-weight: bold;
+      text-align: center;
+      color: darkblue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exemplo do Modelo de Caixa (Box Model)</h1>
+  <div class="caixa">
+    Este é o conteúdo da caixa.
+  </div>
+  <p>
+    🔹 <b>Azul claro</b> = conteúdo <br>
+    🔹 <b>Espaço dentro</b> = padding (20px) <br>
+    🔹 <b>Borda azul</b> = border (5px) <br>
+    🔹 <b>Espaço fora</b> = margin (30px)
+  </p>
+</body>
+</html>
