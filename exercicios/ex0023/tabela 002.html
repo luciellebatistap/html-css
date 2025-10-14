@@ -11,27 +11,45 @@
        table {
         width: 500px;
         border-collapse: collapse;
+        position: relative;
+       }
+       caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
+        background-color: lightgray;
        }
        td, th {
             border: 1px solid black;
             padding: 10px;
        }
-       thead {
+       thead , tfoot {
         background-color: gray;
         color: white;
+       }
+
+       thead > tr > th {
+        position: sticky;
+        top:-1px;
+        background-color:gray;
+       }
+
+       tbody > tr:nth-child(2n){
+       background-color: darkgrey;
        }
     </style>
 </head>
 <body>
     <h1> Uso de Tabelas Grandes </h1>
     <table>
+        <caption>População das unidades federativas </caption>
         <thead>
             <tr>
-               <th>Estado</th>
-               <th>População</th>
+               <th scope="col">Estado</th>
+               <th scope="col" style="width: 10px;">População</th>
             </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
             <tr>
                 <td>São paulo</td>
                 <td>45.919.049</td>
@@ -44,11 +62,122 @@
                 <td>Rio de janeiro </td>
                 <td>58.230</td>
             </tr>
-        <tfoot></tfoot>
-        <tr>
-            <td>Total de habitantes </td>
-            <td>000000 </td>
+            <tr>
+                <td>São paulo</td>
+                <td>45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais </td>
+                <td>21.000</td>
+            </tr>
+            <tr>
+                <td>Rio de janeiro </td>
+                <td>58.230</td>
+            </tr>
+            <tr>
+                <td>São paulo</td>
+                <td>45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais </td>
+                <td>21.000</td>
+            </tr>
+            <tr>
+                <td>Rio de janeiro </td>
+                <td>58.230</td>
+            </tr>
+            <tr>
+                <td>São paulo</td>
+                <td>45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais </td>
+                <td>21.000</td>
+            </tr>
+            <tr>
+                <td>Rio de janeiro </td>
+                <td>58.230</td>
+            </tr>
+            <tr>
+                <td>São paulo</td>
+                <td>45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais </td>
+                <td>21.000</td>
+            </tr>
+            <tr>
+                <td>Rio de janeiro </td>
+                <td>58.230</td>
+            </tr>
+            <tr>
+                <td>São paulo</td>
+                <td>45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais </td>
+                <td>21.000</td>
+            </tr>
+            <tr>
+                <td>Rio de janeiro </td>
+                <td>58.230</td>
+            </tr>
+            <tr>
+                <td>São paulo</td>
+                <td>45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais </td>
+                <td>21.000</td>
+            </tr>
+            <tr>
+                <td>Rio de janeiro </td>
+                <td>58.230</td>
+            </tr>
+            <tr>
+                <td>São paulo</td>
+                <td>45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais </td>
+                <td>21.000</td>
+            </tr>
+            <tr>
+                <td>Rio de janeiro </td>
+                <td>58.230</td>
+            </tr>
+            <tr>
+                <td>São paulo</td>
+                <td>45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais </td>
+                <td>21.000</td>
+            </tr>
+            <tr>
+                <td>Rio de janeiro </td>
+                <td>58.230</td>
+            </tr>
+            <tr>
+                <td>São paulo</td>
+                <td>45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais </td>
+                <td>21.000</td>
+            </tr>
+            <tr>
+                <td>Rio de janeiro </td>
+                <td>58.230</td>
+            </tr>
+        </tbody>
+        <tfoot>
+         <tr>
+            <th scope="row">Total de habitantes </th>
+            <td><strong>502985</strong></td>
         </tr>
+        </tfoot>
+      
     </table>
 </body>
 </html>
