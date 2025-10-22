@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /*Aparelho em pe */
 html {
-    background-image: ;
+    background-image: url(../imagens/cev-portrait.jpg);
+}
+
+h1 {
+    color: brown;
 }
