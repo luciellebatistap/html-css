@@ -2,8 +2,5 @@
 /*Aparelho em pe */
 html {
     background-image: url(../imagens/cev-portrait.jpg);
-}
-
-h1 {
-    color: brown;
+    background-position: center bottom;
 }
