@@ -19,9 +19,15 @@ body {
 }
 
 main {
-    background-color: rgba(255, 255, 255, 0.849);
+    background-color: rgba(255, 255, 255, 0.644);
     width: 90vw;
     margin: auto;
     border-radius: 10px;
     padding: 10px;
 }
+
+img#phone { display:none }
+img#tablet { display: nome; }
+img#impressão { display: nome; }
+img#desktop { display: nome; }
+img#tv { display: nome; }
