@@ -25,15 +25,20 @@ header {
     align-items: center; /*Alinhamento vertical*/
 }
 header > h1 {
-    border: 1px dotted black;
+ 
     flex: 0 0 200px; /*diz não vai crecer, nao vai encolher e fica fixo em 200 px*/
 }
 
 header nav {
-    border: 1px dotted black;
+   
     display: flex;
-    flex-flow: row rap;
+    flex-flow: row wrap;
     justify-content: flex-end; /*fica no canto direito*/
+}
+
+/* botão de menu (escondido por padrão no desktop) */
+.menu-toggle {
+    display: none;
 }
 
 header > nav a {
@@ -55,7 +60,11 @@ header > nav a:hover {
 main {
    background-color: white;
    margin: 10px;
-   padding: auto;
+   padding: 10px;
    border-radius: 10px;
    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.445)
+}
+main > h1 {
+    padding: 10px;
+    border: 0px;
 }
