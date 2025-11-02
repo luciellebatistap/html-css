@@ -10,8 +10,8 @@
 
 * {
   margin:0px;
-  padding:0px
-    box-sizing: border-box;
+  padding:0px;
+  box-sizing: border-box;
 }
 
 :root {
@@ -34,22 +34,53 @@ header {
   color: var(--texto);
   padding: 10px;
   display: flex;
-  justify-content: end;
-  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-nav#idmenu ul {
+nav#menu ul {
   list-style: none; /*Retira as bolinhas do menu*/
   padding: 0;
-  display: flex;
+  display:flex;
   gap: 10px;
 }
 
 nav#menu a {
 text-decoration: none;
 color: var(--texto-inverso);
-font-weight: 600px;
+font-weight: 600;
 padding: 12px 15px;
 border-radius: 5px;
+transition: background-color 0.5s, color 0.5s;
 } 
-  
+
+nav#menu a:hover {
+  background-color: var(--destaque-inverso);
+  color: var(--destaque);
+}
+ 
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+section#ficha {
+  background-color: var(--fundo-card) ;
+  padding: 20px;
+  border-radius: 8px;
+}
+section#ficha img.foto {
+  width: 200px;
+  aspect-ratio: 1/1; /*deixa a foto quadrada*/
+  object-fit: cover; /* distorci a imagem */
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid var(--fundo-card);
+  outline: 5px solid var(--destaque);
+  display: block;
+  margin: auto; /*Deixa a imagem no centro */
+  margin-bottom: 15px;
+ 
+
+}
