@@ -36,6 +36,9 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: sticky; /*Deixa o menu grudado*/
+  top: 0; /*Deixa o menu grudado em cima*/
+  z-index: 1; /*Deixa o header na frente de todas as camadas*/;
 }
 
 nav#menu ul {
